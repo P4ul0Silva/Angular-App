@@ -1,5 +1,7 @@
 # Angular crash course
 
+## Esté é um projeto de estudos em Angular
+
 ## O que é Angular
 
 Angular é uma Plataforma e Framework de código aberto liderada pela Google para construção de aplicações HTML e TypeScript
