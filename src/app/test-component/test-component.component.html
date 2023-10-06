@@ -1,0 +1,31 @@
+<div class="modal" id="testModal" tabindex="-1">
+  <div class="modal-dialog modal-dialog-centered">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title">
+          Idade do {{ studentName }}
+          <span class="text-muted fs-6"
+            >(Property Binding através de componentes)</span
+          >
+        </h5>
+      </div>
+
+      <div class="modal-body">
+        <p>
+          <span class="p-1 border rounded-pill">{{ studentName }}</span> tem
+          <span class="p-1 border rounded-pill">{{ studentAge }}</span> anos! 😌
+        </p>
+        <p class="text-danger">
+          Este componente declara propriedades com o decorator @Input em sua
+          classe que são fornecidas quando chamado por outro componente.
+        </p>
+      </div>
+      <div class="modal-footer">
+        <button class="btn btn-secondary" data-bs-dismiss="modal">
+          Fechar
+        </button>
+        <button class="btn btn-primary" data-bs-dismiss="modal">OK</button>
+      </div>
+    </div>
+  </div>
+</div>

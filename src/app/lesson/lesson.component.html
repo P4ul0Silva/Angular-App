@@ -5,9 +5,13 @@
   <div class="container">
     <h1 class="bg-light">Data Binding</h1>
     <h2 class="text-secondary">One way Data Binding</h2>
-    <p class="lead">Propriedade carregada do componente 'Student':</p>
+    <code
+      >&lt;input placeholder="{{ "{" }}{{ "{" }} data {{ "}" }}{{ "}" }}"
+      /></code
+    >
+    <p class="lead">Propriedade carregada do componente 'Lesson':</p>
     <form action="" class="form-group">
-      <label for="1way">1 Way Data Binding</label>
+      <label for="1way">Propriedade "Data"</label>
       <input
         name="1way"
         class="form-control"
@@ -25,8 +29,12 @@
 <div class="container">
   <div class="container">
     <h2 class="text-secondary">Two way Data Binding</h2>
+    <code
+      >&lt;input [(ngModel)]="{{ "{" }}{{ "{" }} data {{ "}" }}{{ "}" }}"
+      /></code
+    >
     <form class="form-group">
-      <label for="2way">2 Way Data Binding</label>
+      <label for="2way">Atualize a propriedade "Data"</label>
       <input
         class="form-control"
         name="2way"
@@ -62,18 +70,23 @@
     >
     <div class="form-group">
       <ul class="list-group d-flex">
-        <div class="" *ngFor="let student of students">
+        <div class="" *ngFor="let student of lesson">
           <li class="list-group-item fw-light">Nome: {{ student.name }}</li>
           <button
+            data-bs-toggle="modal"
+            data-bs-target="#testModal"
             class="btn btn-light align-item-center"
             type="button"
-            (click)="onSelect(student.age)"
+            (click)="onSelect(student.age, student.name)"
           >
             Mostrar idade do {{ student.name }}!
           </button>
         </div>
       </ul>
-      <h3>Idade selecionada: {{ selectedStudentAge }}</h3>
+      <app-test-component
+        [studentAge]="selectedStudentAge"
+        [studentName]="selectedStudentName"
+      ></app-test-component>
       <p class="lead">
         - Usando *ngFor é possível iterar sobre dados no componente.
       </p>
