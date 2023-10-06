@@ -1,0 +1,85 @@
+<div class="container">
+  <div class="container">
+    <div class="border border-top border-light"></div>
+  </div>
+  <div class="container">
+    <h1 class="bg-light">Data Binding</h1>
+    <h2 class="text-secondary">One way Data Binding</h2>
+    <p class="lead">Propriedade carregada do componente 'Student':</p>
+    <form action="" class="form-group">
+      <label for="1way">1 Way Data Binding</label>
+      <input
+        name="1way"
+        class="form-control"
+        placeholder="{{ data }}"
+        readonly
+      />
+    </form>
+    <p class="lead">
+      Dessa maneira o dado é carregado na view através da model
+    </p>
+    <br />
+  </div>
+</div>
+
+<div class="container">
+  <div class="container">
+    <h2 class="text-secondary">Two way Data Binding</h2>
+    <form class="form-group">
+      <label for="2way">2 Way Data Binding</label>
+      <input
+        class="form-control"
+        name="2way"
+        [(ngModel)]="data"
+        placeholder="blabla"
+      />
+      <p class="lead">
+        Dessa maneira o dado pode ser atualizado, afetando a declaração acima
+      </p>
+    </form>
+  </div>
+</div>
+
+<br />
+
+<div class="container">
+  <div class="border border-top border-light"></div>
+</div>
+
+<br />
+
+<div class="container">
+  <h1 class="bg-light">Event Binding</h1>
+  <div class="container">
+    <h2 class="text-secondary">Diretiva ngFor</h2>
+    <code
+      >&lt;div *ngFor="let something of somethings">some.thing&lt;/div&gt;</code
+    >
+    <h2 class="text-secondary">Event Handler</h2>
+    <code
+      >&lt;button type="button"
+      (click)="handleEventMethod(some.thing)">some.otherThing&lt;/div&gt;</code
+    >
+    <div class="form-group">
+      <ul class="list-group d-flex">
+        <div class="" *ngFor="let student of students">
+          <li class="list-group-item fw-light">Nome: {{ student.name }}</li>
+          <button
+            class="btn btn-light align-item-center"
+            type="button"
+            (click)="onSelect(student.age)"
+          >
+            Mostrar idade do {{ student.name }}!
+          </button>
+        </div>
+      </ul>
+      <h3>Idade selecionada: {{ selectedStudentAge }}</h3>
+      <p class="lead">
+        - Usando *ngFor é possível iterar sobre dados no componente.
+      </p>
+      <p class="lead">
+        - Usando evento para chamar o método da classe/componente
+      </p>
+    </div>
+  </div>
+</div>
