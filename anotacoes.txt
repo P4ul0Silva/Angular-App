@@ -101,6 +101,44 @@ PROPERTY BINDING
 
 
 
+SERVICES
+ng g s nomeDoServico
+
+
+DEPENDENCY INJECTION
+
+declarar em providers no modulo reduz o escopo para o modulo
+declarar o metadado providedIn no @Injectable pode aumentar o escopo para o root
+
+
+
+
+ANGULAR MODULES
+
+meio de organizar o código em modulos
+
+
+
+
+ANGULAR ROUTING
+
+
+ng generate module app-routing 
+-flat ( cria sem o diretorio )
+--module=app ( cria em outro modulo )
+
+imports:
+RouterModule, Routes from @angular/router
+
+directives:
+routerLink
+
+
+
+
+
+
+
 
 
 
