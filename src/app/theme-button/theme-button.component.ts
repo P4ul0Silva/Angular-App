@@ -10,6 +10,7 @@ export class ThemeButtonComponent implements OnInit{
 
   theme: boolean = false;
 
+  // injecao de dependencia
   constructor(private sharedService: SharedService, private renderer: Renderer2) {}
 
   ngOnInit(): void {

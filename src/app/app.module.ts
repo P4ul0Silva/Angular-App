@@ -7,17 +7,21 @@ import { LessonComponent } from './lesson/lesson.component';
 import { TestComponentComponent } from './test-component/test-component.component';
 import { ThemeButtonComponent } from './theme-button/theme-button.component';
 import { StudentService } from './student.service';
+import { AppRoutingModule } from './app-routing.module';
+import { SuccessComponent } from './success/success.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     LessonComponent,
     TestComponentComponent,
-    ThemeButtonComponent
+    ThemeButtonComponent,
+    SuccessComponent
   ],
   imports: [
     BrowserModule,
-    FormsModule
+    FormsModule,
+    AppRoutingModule
   ],
   // DI ao escopo do Modulo
   // providers: [StudentService],
