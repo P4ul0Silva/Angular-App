@@ -5,7 +5,7 @@
         <h5 class="modal-title">
           Idade do {{ studentName }}
           <span class="text-muted fs-6"
-            >(Property Binding através de componentes)</span
+            >(Property Binding entre componentes)</span
           >
         </h5>
       </div>
@@ -16,8 +16,9 @@
           <span class="p-1 border rounded-pill">{{ studentAge }}</span> anos! 😌
         </p>
         <p class="text-danger">
-          Este componente declara propriedades com o decorator @Input em sua
-          classe que são fornecidas quando chamado por outro componente.
+          Este componente declara propriedades com o decorator
+          <span class="border bg-light">@Input</span> em sua classe que podem
+          receber dados quando chamado por outro componente.
         </p>
       </div>
       <div class="modal-footer">

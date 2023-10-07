@@ -1,7 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { Student } from '../student';
-import { lesson } from '../student.records';
-
+import { StudentService } from '../student.service';
 @Component({
   selector: 'app-lesson',
   templateUrl: './lesson.component.html',
@@ -9,7 +8,7 @@ import { lesson } from '../student.records';
 })
 export class LessonComponent implements OnInit {
 
-  lesson = lesson;
+  students : Student[] | undefined;
   data = "Data";
 
   selectedStudentAge: number | undefined;
@@ -24,6 +23,12 @@ export class LessonComponent implements OnInit {
   }
 
   ngOnInit(): void {
-    
+    this.getStudents();
   }
+
+  getStudents(): void {
+    let obj = new StudentService();
+    this.students = obj.getStudents();
+  }
+
 }

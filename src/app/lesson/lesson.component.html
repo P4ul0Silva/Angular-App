@@ -65,12 +65,12 @@
     >
     <h2 class="text-secondary">Event Handler</h2>
     <code
-      >&lt;button type="button"
-      (click)="handleEventMethod(some.thing)">some.otherThing&lt;/div&gt;</code
+      >&lt;button type="button" (click)="handleEventMethod(some.thing)">{{ "{"
+      }}{{ "{" }} some.thing {{ "}" }}{{ "}" }}&lt;/div&gt;</code
     >
     <div class="form-group">
       <ul class="list-group d-flex">
-        <div class="" *ngFor="let student of lesson">
+        <div class="" *ngFor="let student of students">
           <li class="list-group-item fw-light">Nome: {{ student.name }}</li>
           <button
             data-bs-toggle="modal"
@@ -83,10 +83,12 @@
           </button>
         </div>
       </ul>
+
       <app-test-component
         [studentAge]="selectedStudentAge"
         [studentName]="selectedStudentName"
       ></app-test-component>
+
       <p class="lead">
         - Usando *ngFor é possível iterar sobre dados no componente.
       </p>

@@ -1,0 +1,124 @@
+Compila sintaxe angular para o html
+
+Usa JIT e AOC, Just in Time Compilation e Ahead of Time Compilator.
+
+Usa webpack para reduzir o tamanho do código e aumenta a eficiencia
+
+webpack unifica todo javascript carregado
+
+
+
+JIT
+
+carrega aplicação mais lentamente pela primeira vez
+
+requer libs adicionais para compilar e um tamanho maior
+
+bom para ambiente de produção
+
+mais seguro pois o código fonte é escondido
+
+
+
+ng serve --open
+
+- é carregado em memória!
+
+- utiliza webpack middleware para rodar o servidor 'bundlado'
+
+- roda na porta 4200
+
+
+
+Instalando Boostrap com Angular
+
+npm install boostrap@5.3.2
+npm install jquery (responsividade)
+
+
+Incluindo no angular.json
+
+CSS
+angular.json incluir diretorio css do bootstrap.css 
+"build { 
+	"styles": [
+		".../dist/css/bootstrap.css"
+]}" 
+
+
+JSS
+angular.json incluir diretório do bootstrap.min.js 
+"build {
+	"scripts": 
+		[
+"diretorio"
+]}
+
+
+
+
+
+COMPONENTS
+
+criar component
+$ ng generate component nome
+
+- Cria um novo diretorio com todos os arquivos necessarios
+- Utiliza decorator @Component com metadados
+- ngOnInit hook ciclo de vida de logica de inicialização
+- selector é usado no html para mostrar o componente
+- no html é criado uma tag com o nome do seletor do componente
+
+
+DATA BINDING
+Sincronizar dados entre view e model
+
+1 way e 2 way 
+(view -> model | view -> model -> view)
+
+
+diretiva 2way data binding:
+	[(ngModel)] = "classe.prop" 
+
+
+
+
+EVENT BINDING
+
+Utiliza de sintaxe específica nas tags html para usar dados da model
+
+como loops e manipuladores de evento
+
+
+
+PROPERTY BINDING
+
+- decorator @Input marca uma propriedade para receber dados
+- [prop]=propName é usada quando quiser passar alguma prop p/ o input
+-
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
